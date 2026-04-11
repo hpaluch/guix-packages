@@ -11,7 +11,7 @@
 (define-public pil-git-scripts
 (package
   (name "pil-git-scripts")
-  (version "0.99.1")
+  (version "0.99.2")
   (source
    (origin
     (method git-fetch)
@@ -28,7 +28,7 @@
    ))
   (home-page "https://github.com/hpaluch-pil/pil-git-scripts")
   (synopsis "My Git scripts")
-  (description "Set of Git scripts I found useful 2004.")
+  (description "Set of Git scripts I found useful.")
   ;; license is MIT, but I'm unable to find it in official package
   (license bsd-0))
 )
