@@ -1,6 +1,8 @@
 # My Guix packages (channel)
 
-Here are my experimental Guix packages.
+Here are my experimental Guix packages. Currently these are available:
+- `pil-git-scripts` my scripts that I use with git (push current branch etc...) - (Copy build system)
+- `clockres` - simple tool to report available clock resolutions (CMake build system)
 
 Note: this channels is not yet signed so you have to
 do following trickery to use it:
@@ -25,7 +27,7 @@ Now create file `~/.config/guix/channels.scm` with contents:
 Run:
 ```shell
 guix pull
-guix install pil-git-scripts # the only package in my channel
+guix install pil-git-scripts # one package in my channel
 ls ~/.guix-profile/bin/*.sh # scripts from pil-git-scripts package
 ```
 
