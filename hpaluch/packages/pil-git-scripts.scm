@@ -1,4 +1,4 @@
-;; Guix package fo Pickering Git Scripts (pil-git-scripts) project from GitHub
+;; Guix package for Pickering Git Scripts (pil-git-scripts) project from GitHub
 
 (define-module (hpaluch packages pil-git-scripts)
   #:use-module (guix packages)
@@ -29,5 +29,6 @@
   (home-page "https://github.com/hpaluch-pil/pil-git-scripts")
   (synopsis "My Git scripts")
   (description "Set of Git scripts I found useful 2004.")
+  ;; license is MIT, but I'm unable to find it in official package
   (license bsd-0))
 )
