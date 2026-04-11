@@ -14,6 +14,7 @@ git clone https://github.com/hpaluch/guix-packages.git
 
 Now create file `~/.config/guix/channels.scm` with contents:
 ```scheme
+;; from: https://guix.gnu.org/cookbook/en/html_node/Channels.html
 (append (list (channel
 	       (name 'my-channel)
 	       (url (string-append "file://" (getenv "HOME")
@@ -27,3 +28,7 @@ guix pull
 guix install pil-git-scripts # the only package in my channel
 ls ~/.guix-profile/bin/*.sh # scripts from pil-git-scripts package
 ```
+
+# Resources
+
+Mainly I used: https://guix.gnu.org/cookbook/en/html_node/Channels.html
