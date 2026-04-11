@@ -31,6 +31,27 @@ guix install pil-git-scripts # one package in my channel
 ls ~/.guix-profile/bin/*.sh # scripts from pil-git-scripts package
 ```
 
+# Tips
+
+Pull just specific channel:
+
+- see https://forum.systemcrafters.net/t/is-there-a-way-to-pull-only-one-channel-not-the-guix-channel/1757
+- steps from above URL, Copyright `wegei8`:
+  ```shell
+  cd
+  guix describe --format=channels > channels.scm
+  vim channels.scm # completely remove "(commit ...)" from `my-channel`
+  guix pull --channels=./channels.scm
+  ```
+- WARNING! If you did force-push (e.g. amended commit) to your package you need to add `--allow-downgrades`):
+  ```shell
+  guix pull --channels=./channels.scm --allow-downgrades
+  ```
+  - see also https://issues.guix.gnu.org/41604 - fortunately my Guix works properly with
+    that option
+
 # Resources
 
-Mainly I used: https://guix.gnu.org/cookbook/en/html_node/Channels.html
+* Mainly I used: https://guix.gnu.org/cookbook/en/html_node/Channels.html
+* How to pull just single channel: https://forum.systemcrafters.net/t/is-there-a-way-to-pull-only-one-channel-not-the-guix-channel/1757
+* How to avoid error `guix pull: error: aborting update of channel 'my-channel' to commit X, which is not a descendant of Y`: https://issues.guix.gnu.org/41604
