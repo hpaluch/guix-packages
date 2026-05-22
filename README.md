@@ -3,6 +3,7 @@
 Here are my experimental Guix packages. Currently these are available:
 - `pil-git-scripts` my scripts that I use with git (push current branch etc...) - (Copy build system)
 - `clockres` - simple tool to report available clock resolutions (CMake build system)
+- `procps-top-normal` - traditional `top` command - without crazy colors and/or trees
 
 Note: this channels is not yet signed so you have to
 do following trickery to use it:
